@@ -37,4 +37,11 @@ public class HelloController {
     public String sayHelloWithPost(@RequestBody UserDTO user) {
         return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
     }
+
+    // Use Case 5: PUT Request with Path Variable and Query Parameter
+    // API :-localhost:8080/hello/put/Daksh?lastName=Pratap
+    @PutMapping("/put/{firstName}")
+    public String sayHelloWithPut(@PathVariable String firstName, @RequestParam String lastName) {
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz";
+    }
 }
