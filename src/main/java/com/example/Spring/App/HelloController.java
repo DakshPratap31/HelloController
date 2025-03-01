@@ -20,4 +20,11 @@ public class HelloController {
     public String sayHelloWithQuery(@RequestParam String name) {
         return "Hello " + name + " from BridgeLabz";
     }
+
+    // Use Case 3: GET Request with Path Variable
+    //Api:-localhost:8080/hello/param/daksh
+    @GetMapping("/param/{name}")
+    public String sayHelloWithPath(@PathVariable String name) {
+        return "Hello " + name + " from BridgeLabz";
+    }
 }
