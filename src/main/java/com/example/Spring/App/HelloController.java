@@ -14,4 +14,10 @@ public class HelloController {
     }
 
 
+    // Use Case 2: GET Request with Query Parameter
+    //Api:-localhost:8080/hello/query?name=Daksh
+    @GetMapping("/query")
+    public String sayHelloWithQuery(@RequestParam String name) {
+        return "Hello " + name + " from BridgeLabz";
+    }
 }
